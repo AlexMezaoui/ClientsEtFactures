@@ -10,6 +10,7 @@ public class Client
 	 * @param nom le nom du client. 
 	 */
 	private String nom;
+	
 	public Client(String nom)
 	{
 		this.nom=nom;
