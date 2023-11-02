@@ -11,7 +11,7 @@ public class Facture
 	
 	public Client getClient()
 	{
-		return null;
+		return new Client(nom);
 	}
 
 	/**
