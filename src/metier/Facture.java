@@ -14,6 +14,9 @@ public class Facture
 		if (montant >=0) {
 			this.montant=montant;
 		}
+		else {
+			throw new IllegalArgumentException();
+		}
 	}
 	/**
 	 * Retourne le client à qui est adressée la facture..
