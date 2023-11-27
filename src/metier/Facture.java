@@ -11,8 +11,9 @@ public class Facture
 	
 	public Facture(int montant)
 	{
-		
-		this.montant=montant;
+		if (montant >=0) {
+			this.montant=montant;
+		}
 	}
 	/**
 	 * Retourne le client à qui est adressée la facture..
