@@ -82,3 +82,10 @@ public class Facture
 		return new Facture(montant);
 	}
 }
+class Negatif extends IllegalArgumentException
+{
+	@Override
+	public String toString(String message) {
+		return message;
+	}
+}
