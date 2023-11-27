@@ -11,7 +11,7 @@ public class Facture
 	
 	public Facture(int montant)
 	{
-		//super
+		
 		this.montant=montant;
 	}
 	/**
@@ -42,9 +42,10 @@ public class Facture
 	public void setReglee(boolean reglee) {
 		this.reglee = reglee;
 	}
+	
 	public boolean estReglee()
 	{
-		return true;
+		return reglee;
 	}
 
 	/**
