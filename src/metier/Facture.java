@@ -9,13 +9,15 @@ public class Facture
 	private LocalDate DateFacture;
 	private boolean reglee;
 	
-	public Facture(int montant)
+	public Facture(int montant) throws IllegalArgumentException
 	{
-		if (montant >=0) {
-			this.montant=montant;
+		try {
+			if (montant >=0) {
+				this.montant=montant;
+			}
 		}
-		else {
-			throw new IllegalArgumentException();
+		catch (IllegalArgumentException e) {
+			System.out.println("Le montant d'une facture ne peut pas être négatif.");
 		}
 	}
 	/**
