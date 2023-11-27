@@ -6,9 +6,12 @@ public class Facture
 {
 	private int montant;
 	private Client client;
+	private LocalDate DateFacture;
+	private boolean reglee;
 	
 	public Facture(int montant)
 	{
+		//super
 		this.montant=montant;
 	}
 	/**
@@ -36,6 +39,9 @@ public class Facture
 	 * @return vrai ssi la facture est reglée.
 	 */
 	
+	public void setReglee(boolean reglee) {
+		this.reglee = reglee;
+	}
 	public boolean estReglee()
 	{
 		return true;
@@ -48,7 +54,7 @@ public class Facture
 	
 	public LocalDate getDate()
 	{
-		return null;
+		return LocalDate.now();
 	}
 
 	/**
