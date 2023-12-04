@@ -85,7 +85,7 @@ public class Facture
 class Negatif extends IllegalArgumentException
 {
 	@Override
-	public String toString(String message) {
-		return message;
+	public String toString() {
+		return "Le montant d'une facture ne peut être négatif.";
 	}
 }
