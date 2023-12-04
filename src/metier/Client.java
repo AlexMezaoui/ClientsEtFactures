@@ -11,6 +11,7 @@ public class Client
 	 * @param nom le nom du client. 
 	 */
 	private String nom;
+	ArrayList <Facture> factures ;
 
 	public Client(String nom)
 	{
@@ -45,7 +46,9 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		return new Facture(montant, this, LocalDate.now());
+		Facture facture = new Facture(montant, this, LocalDate.now());
+		factures.add(facture);
+		return facture;
 	}
 	
 	/**
@@ -55,7 +58,7 @@ public class Client
 
 	public List<Facture> getFactures()
 	{
-		return null;
+		return factures;
 	}
 	
 	/**
@@ -65,7 +68,12 @@ public class Client
 	
 	public int sommeMontants()
 	{
-		return 0;
+		int somme = 0;
+		for(int i =0 ; i<factures.size() ; i++) {
+			somme += factures.get(i).getMontant();
+	}
+		
+		return somme;
 	}
 
 	/**
@@ -79,6 +87,7 @@ public class Client
 	{
 		Facture facture = new Facture(montant, this, LocalDate.now());
 		facture.setReglee(reglee);
+		factures.add(facture);
 		return facture;
 	}	
 	
