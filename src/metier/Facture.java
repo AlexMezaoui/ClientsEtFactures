@@ -9,7 +9,7 @@ public class Facture
 	private LocalDate DateFacture;
 	private boolean reglee;
 	
-	public Facture(int montant) throws Negatif 	
+	public Facture(int montant, Client client) throws Negatif 	
 	{
 			if (montant >0) {
 				this.montant=montant;
@@ -17,6 +17,7 @@ public class Facture
 			else {
 				throw new Negatif();
 			}
+			this.client = client;
 	}
 	/**
 	 * Retourne le client à qui est adressée la facture..
