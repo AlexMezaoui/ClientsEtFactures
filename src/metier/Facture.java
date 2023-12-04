@@ -11,7 +11,7 @@ public class Facture
 	
 	public Facture(int montant) throws Negatif 	
 	{
-			if (montant >=0) {
+			if (montant >0) {
 				this.montant=montant;
 			}
 			else {
