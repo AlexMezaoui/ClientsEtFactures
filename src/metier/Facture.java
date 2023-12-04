@@ -78,7 +78,7 @@ public class Facture
 	
 	public Facture copie()
 	{
-		return new Facture(montant);
+		return new Facture(montant, client);
 	}
 }
 class Negatif extends IllegalArgumentException
