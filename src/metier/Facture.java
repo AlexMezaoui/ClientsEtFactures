@@ -9,7 +9,7 @@ public class Facture
 	private LocalDate DateFacture;
 	private boolean reglee;
 	
-	public Facture(int montant, Client client, LocalDate DateFacture) throws Negatif 	
+	public Facture(int montant, Client client, LocalDate DateFacture, boolean reglee) throws Negatif 	
 	{
 			if (montant >0) {
 				this.montant=montant;
@@ -19,7 +19,7 @@ public class Facture
 			}
 			this.client = client;
 			this.DateFacture = DateFacture;
-	}
+			this.reglee = reglee;	}
 	/**
 	 * Retourne le client à qui est adressée la facture..
 	 * @return le client.
@@ -80,7 +80,7 @@ public class Facture
 	
 	public Facture copie()
 	{
-		return new Facture(montant, client, DateFacture);
+		return new Facture(montant, client, DateFacture, reglee);
 	}
 }
 class Negatif extends IllegalArgumentException

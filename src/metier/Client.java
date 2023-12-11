@@ -46,7 +46,7 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		Facture facture = new Facture(montant, this, LocalDate.now());
+		Facture facture = new Facture(montant, this, LocalDate.now(), false);
 		factures.add(facture);
 		return facture;
 	}
@@ -71,8 +71,7 @@ public class Client
 		int somme = 0;
 		for(int i =0 ; i<factures.size() ; i++) {
 			somme += factures.get(i).getMontant();
-	}
-		
+		}
 		return somme;
 	}
 
@@ -85,8 +84,7 @@ public class Client
 	
 	public Facture createFacture(int montant, boolean reglee)
 	{
-		Facture facture = new Facture(montant, this, LocalDate.now());
-		facture.setReglee(reglee);
+		Facture facture = new Facture(montant, this, LocalDate.now(), reglee);
 		factures.add(facture);
 		return facture;
 	}	
