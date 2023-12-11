@@ -98,7 +98,7 @@ public class Client
 	
 	public List<Facture> facturesReglees()
 	{
-		ArrayList <Facture> facturesreglees;
+		ArrayList <Facture> facturesreglees = new ArrayList<>();
 		for(Facture factu : factures) {
 			if (factu.estReglee() == true) {
 				facturesreglees.add(factu); 
