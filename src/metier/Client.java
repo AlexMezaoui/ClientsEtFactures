@@ -125,4 +125,8 @@ public class Client
 	{
 		clients.remove(this);
 	}
+	
+	public void supprimeFacture(Facture factu) {
+		factures.remove(factu);
+	}
 }

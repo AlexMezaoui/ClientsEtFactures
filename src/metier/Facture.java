@@ -71,7 +71,7 @@ public class Facture
 	
 	public void delete()
 	{
-		
+		client.supprimeFacture(this);
 	}
 	
 	/**
