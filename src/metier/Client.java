@@ -12,10 +12,12 @@ public class Client
 	 */
 	private String nom;
 	ArrayList <Facture> factures ;
-
+	static ArrayList <Client> clients;
+	
 	public Client(String nom)
 	{
 		this.nom=nom;
+		clients.add(this);
 	}
 
 	/**
@@ -93,10 +95,17 @@ public class Client
 	 * Retourne la liste des factures reglées. 
 	 * @return la liste des factures reglées.
 	 */
-
+	
 	public List<Facture> facturesReglees()
 	{
-		return null;
+		ArrayList <Facture> facturesreglees;
+		for(Facture factu : factures) {
+			if (factu.estReglee() == true) {
+				facturesreglees.add(factu); 
+			}
+		}
+		return facturesreglees;
+			
 	}
 	
 
@@ -106,7 +115,7 @@ public class Client
 	 */
 	public static List<Client> tous()
 	{
-		return null;
+		return clients;
 	}
 	
 	/**
@@ -115,5 +124,6 @@ public class Client
 	
 	public void delete()
 	{
+		clients.remove(this);
 	}
 }
