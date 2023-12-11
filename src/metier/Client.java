@@ -71,9 +71,8 @@ public class Client
 	public int sommeMontants()
 	{
 		int somme = 0;
-		for(int i =0 ; i<factures.size() ; i++) {
-			somme += factures.get(i).getMontant();
-		}
+		for (Facture factu:factures)
+			somme += factu.getMontant();
 		return somme;
 	}
 
