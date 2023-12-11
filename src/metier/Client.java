@@ -11,8 +11,8 @@ public class Client
 	 * @param nom le nom du client. 
 	 */
 	private String nom;
-	ArrayList <Facture> factures ;
-	static ArrayList <Client> clients;
+	ArrayList <Facture> factures = new ArrayList<>() ;
+	static ArrayList <Client> clients = new ArrayList<>();
 	
 	public Client(String nom)
 	{

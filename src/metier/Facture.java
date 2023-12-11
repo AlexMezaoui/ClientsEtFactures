@@ -19,7 +19,8 @@ public class Facture
 			}
 			this.client = client;
 			this.DateFacture = DateFacture;
-			this.reglee = reglee;	}
+			this.reglee = reglee;	
+	}
 	/**
 	 * Retourne le client à qui est adressée la facture..
 	 * @return le client.
